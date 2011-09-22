@@ -1,0 +1,26 @@
+
+save-point is a set of (x)emacs functions that allow you to 
+save your current position, buffer and place in that buffer, and
+then later return to that location. Locations are stored last-in first-out
+so that if you're working on some code and say, need to modify a function
+in another location before finishing your current task, you can push 
+your current location, navigate to the new location, and then return 
+to your first location with a single command. Sometimes one problem leads
+to another so save-point allows you to have arbitrarily many locations saved.
+
+
+To use the mode put save-point.el in your load-path, and then, in your .emacs 
+(or other initialization file) do a 
+(require 'save-point)
+
+By default it will bind: 
+  save-point to C-v
+  restore-point to M-v
+  swap the top two locations to M-V
+  clear all saved points to M-C-v
+
+See the bottom of the file to do your own mappings. Enjoy!
+
+
+
+
